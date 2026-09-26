@@ -24,15 +24,15 @@ class GuardLocalTest(TempRepoCase):
         payload = {"tool_name": tool, "tool_input": tool_input, "cwd": self.root}
         return guard_local.decide(payload, self.root)[0]
 
-    # --- design_system -----------------------------------------------------
-    def test_write_design_system_is_denied(self):
-        self.assertEqual(self.decide("Write", file_path=self.path(".local", "design_system", "x.md"), content="x"), "deny")
+    # --- project-requirements -----------------------------------------------------
+    def test_write_project_requirements_is_denied(self):
+        self.assertEqual(self.decide("Write", file_path=self.path(".local", "project-requirements", "x.md"), content="x"), "deny")
 
-    def test_edit_design_system_relative_path_is_denied(self):
-        self.assertEqual(self.decide("Edit", file_path=".local/design_system/spec.md", old_string="a", new_string="b"), "deny")
+    def test_edit_project_requirements_relative_path_is_denied(self):
+        self.assertEqual(self.decide("Edit", file_path=".local/project-requirements/spec.md", old_string="a", new_string="b"), "deny")
 
-    def test_design_system_readme_is_allowed(self):
-        self.assertIsNone(self.decide("Edit", file_path=self.path(".local", "design_system", "README.md"), old_string="a", new_string="b"))
+    def test_project_requirements_readme_is_allowed(self):
+        self.assertIsNone(self.decide("Edit", file_path=self.path(".local", "project-requirements", "README.md"), old_string="a", new_string="b"))
 
     # --- test --------------------------------------------------------------
     def test_edit_test_data_asks(self):
@@ -112,14 +112,14 @@ class GuardLocalTest(TempRepoCase):
         self.assertEqual(self.decide("Write", file_path=self.path("src", "README.md"), content="see .local/test/x\n"), "ask")
 
     def test_file_outside_project_is_ignored(self):
-        self.assertIsNone(self.decide("Write", file_path="/somewhere/else/.local/design_system/a.md", content="x"))
+        self.assertIsNone(self.decide("Write", file_path="/somewhere/else/.local/project-requirements/a.md", content="x"))
 
     def test_notebook_edit_uses_notebook_path(self):
-        self.assertEqual(self.decide("NotebookEdit", notebook_path=self.path(".local", "design_system", "n.ipynb"), new_source="x"), "deny")
+        self.assertEqual(self.decide("NotebookEdit", notebook_path=self.path(".local", "project-requirements", "n.ipynb"), new_source="x"), "deny")
 
     # --- end to end ---------------------------------------------------------
     def test_script_emits_permission_decision_json(self):
-        payload = {"tool_name": "Write", "tool_input": {"file_path": ".local/design_system/x.md", "content": "x"}, "cwd": self.root}
+        payload = {"tool_name": "Write", "tool_input": {"file_path": ".local/project-requirements/x.md", "content": "x"}, "cwd": self.root}
         code, out = self.run_script("guard_local.py", payload)
         self.assertEqual(code, 0)
         data = json.loads(out)

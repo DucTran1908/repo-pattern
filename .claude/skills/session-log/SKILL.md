@@ -11,8 +11,9 @@ description: Write or update the session log with the user's decisions and the a
    1. Git branch name
    2. Completion time (local time, `YYYY-MM-DD HH:mm`)
    3. Short cause leading to the decisions / changes
-   4. Table of decisions / changes
+   4. Table of decisions / changes, with the work level of each change
    5. Short impact of the decisions / chosen change approach
    6. Details of each decision / change (matching the table ids)
-4. Record deviations from the plan (extra files, skipped items and who approved them).
-5. Add or update the row in `.local/session_log/README.md`.
+4. Small work (see `CLAUDE.md` → *Work levels*) gets one row in the table and no detail entry. Medium and large work get a detail entry including the verification evidence.
+5. Record deviations from the plan (extra files, skipped items and who approved them).
+6. Add or update the row in `.local/session_log/README.md`.

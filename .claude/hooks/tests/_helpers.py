@@ -15,7 +15,7 @@ if HOOKS_DIR not in sys.path:
 class TempRepoCase(unittest.TestCase):
     """Creates an isolated project root with the standard .local layout."""
 
-    SUBFOLDERS = ("plan", "design_system", "report", "reference", "test", "temp", "session_log")
+    SUBFOLDERS = ("plan", "project-requirements", "report", "reference", "test", "temp", "session_log")
 
     def setUp(self):
         self.root = tempfile.mkdtemp(prefix="hooktest_")

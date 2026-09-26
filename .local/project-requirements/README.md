@@ -1,4 +1,4 @@
-# design_system
+# project-requirements
 
 | Path | Description |
 |---|---|

@@ -1,10 +1,10 @@
 """PreToolUse guard for file-editing tools (Edit, Write, MultiEdit, NotebookEdit).
 
 Rules for the local workspace:
-  design_system/  user's raw requirements   -> deny (report blockers instead)
-  test/           user's test data          -> ask
-  plan/           approved plans            -> new file ok; overwrite/other edits ask;
-                                               in-order `[ ]` -> `[x]` ticks pass through
+  project-requirements/  user's raw requirements -> deny (report blockers instead)
+  test/                  user's test data        -> ask
+  plan/                  approved plans          -> new file ok; overwrite/other edits ask;
+                                                    in-order `[ ]` -> `[x]` ticks pass through
   README.md in any subfolder is the index and may always be updated.
 
 Tracked source files must not reference local workspace content; only the
@@ -124,8 +124,8 @@ def decide(payload, root):
         sub, rest = loc
         if rest == INDEX_FILE:
             return None, ""
-        if sub == "design_system":
-            return "deny", ("design_system holds the user's exact requirements and is read-only for agents. "
+        if sub == "project-requirements":
+            return "deny", ("project-requirements holds the user's exact requirements and is read-only for agents. "
                             "Report the blocker to the user and propose a change instead.")
         if sub == "test":
             return "ask", "test holds user-provided test data; edit only when the user explicitly asked."

@@ -5,7 +5,7 @@ import subprocess
 import sys
 
 LOCAL_DIR = ".local"
-SUBFOLDERS = ("plan", "design_system", "report", "reference", "test", "temp", "session_log")
+SUBFOLDERS = ("plan", "project-requirements", "report", "reference", "test", "temp", "session_log")
 INDEX_FILE = "README.md"
 
 _SEVERITY = {None: 0, "ask": 1, "deny": 2}

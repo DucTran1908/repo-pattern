@@ -1,6 +1,7 @@
 # Implement plan: <Tiêu đề>
 
 - Trạng thái: draft | approved | in-progress | done | blocked
+- Mức độ: vừa | lớn — <lý do ngắn>
 - Branch: <git branch>
 - Ngày tạo: YYYY-MM-DD
 - Spec liên quan: <SPEC-XXX hoặc không có>
@@ -41,14 +42,18 @@
 ## 7. Checklist to do
 > Tóm tắt: <thứ tự thực hiện>
 
-- [ ] T1. <viết test cho ...> (đỏ)
-- [ ] T2. <implement ...> (xanh)
+- [ ] T1. <chuẩn bị kiểm chứng cho ...: test / script đo / output mẫu / checklist> (đỏ nếu chạy được)
+- [ ] T2. <thực hiện ...> (kiểm chứng đạt)
 - [ ] T3. <refactor / cập nhật tài liệu>
-- [ ] T4. Chạy toàn bộ test, đối chiếu tiêu chí nghiệm thu
+- [ ] T4. Chạy toàn bộ kiểm chứng, đối chiếu tiêu chí nghiệm thu
 - [ ] T5. Ghi session log
 
 ## 8. Tiêu chí nghiệm thu
 > Tóm tắt: <một câu: khi nào coi là xong>
 
-1. <Tiêu chí kiểm chứng được, gắn AC-n nếu có spec>
-2. ...
+Phương pháp: `test` | `metric` | `output-diff` | `manual` | `review`
+
+| ID | Tiêu chí | Phương pháp | Cách kiểm chứng |
+|---|---|---|---|
+| AC-1 | <tiêu chí kiểm chứng được> | test | <tên test / lệnh chạy> |
+| AC-2 | ... | metric | <script, dữ liệu, ngưỡng> |

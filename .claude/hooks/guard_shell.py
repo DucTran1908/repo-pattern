@@ -9,10 +9,10 @@ import re
 
 from _common import INDEX_FILE, run_pre_tool, worst
 
-PROTECTED = {"design_system": "deny", "test": "ask", "plan": "ask"}
+PROTECTED = {"project-requirements": "deny", "test": "ask", "plan": "ask"}
 
 SEGMENT_SPLIT = re.compile(r"&&|\|\||[;\n|]")
-PROTECTED_REF = re.compile(r"(?<![\w.-])\.local[/\\](design_system|test|plan)((?:[/\\][^\s\"'|;&<>]*)?)")
+PROTECTED_REF = re.compile(r"(?<![\w.-])\.local[/\\](project-requirements|test|plan)(?![\w-])((?:[/\\][^\s\"'|;&<>]*)?)")
 WHOLE_LOCAL = re.compile(r"(?<![\w.-])\.local[/\\]?(?=[\s\"']|$)")
 REDIRECT_TARGET = re.compile(r">{1,2}\s*[\"']?([^\s\"']+)")
 MUTATING_VERB = re.compile(
@@ -27,7 +27,7 @@ GIT_FORCE_ADD = re.compile(r"\bgit\s+add\b.*\s(?:-f|--force)\b")
 LOCAL_ANY = re.compile(r"(?<![\w.-])\.local(?:[/\\]|\b)")
 
 REASONS = {
-    "deny": ("design_system holds the user's exact requirements and is read-only for agents. "
+    "deny": ("project-requirements holds the user's exact requirements and is read-only for agents. "
              "Report the blocker and propose a change instead."),
     "ask": "This command modifies protected local workspace data (test data or a plan); user approval required.",
 }

@@ -18,5 +18,5 @@ Steps:
 
 1. Determine what changed (`git diff`, recent session logs, the plan just finished, specs in `specs/`).
 2. Update only the affected files. Create a missing file with the structure above. Keep each file short — summaries, not copies of the code or specs.
-3. Sources of truth win: if the reference disagrees with code or specs, fix the reference. If it disagrees with `.local/design_system/`, do not change either — report the conflict to the user.
+3. Sources of truth win: if the reference disagrees with code or specs, fix the reference. If it disagrees with `.local/project-requirements/`, do not change either — report the conflict to the user.
 4. Update `.local/reference/README.md` for any file added or removed.

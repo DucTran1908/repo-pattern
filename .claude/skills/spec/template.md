@@ -19,8 +19,13 @@
 - <What this spec explicitly does not cover.>
 
 ## Acceptance criteria
-- AC-1: Given <state>, when <action>, then <observable result>.
-- AC-2: ...
+
+Method: `test` | `metric` | `output-diff` | `manual` | `review`
+
+| ID | Criterion | Method | How it is verified |
+|---|---|---|---|
+| AC-1 | Given <state>, when <action>, then <observable result>. | test | <test name / location> |
+| AC-2 | <measurable outcome> | metric | <script, dataset, threshold, e.g. accuracy >= 0.90> |
 
 ## Open questions
 - <Question> — <who can answer>

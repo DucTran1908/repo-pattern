@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-09-28",
+  "review": "Initial baseline: user-approved mapping, original templates compared, independent read-only review and regression fixes. Live desktop/handoff acceptance remains pending.",
+  "pairs": [
+    {
+      "id": "rules",
+      "source": "CLAUDE.md",
+      "target": "AGENTS.md",
+      "source_sha256": "667e257230bed8b68411c32469184ee82a81fe0630043d8c59307498ce410e48",
+      "target_sha256": "c7bc548d7af772490f08d02d77901675fdefc9d0cf1fe8eef42ab040aa619cc3",
+      "differences": "Same workflow contract. Codex uses native discovery/Plan Mode, advisory approval hooks, independent profiles and coordinator-only checklist edits. Project commands remain in the Claude table."
+    },
+    {
+      "id": "skill-implement",
+      "source": ".claude/skills/implement/SKILL.md",
+      "target": ".agents/skills/implement/SKILL.md",
+      "source_sha256": "5b974daa9eb314ff903a129d5fba073f43fe61262115c4abc6ddaf28497efa6a",
+      "target_sha256": "d16b7067ab3e53f63af8abc7e8281b6b4f91ba32da765a5edb4f287a9477232a",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "skill-plan",
+      "source": ".claude/skills/plan/SKILL.md",
+      "target": ".agents/skills/plan/SKILL.md",
+      "source_sha256": "4983f895563ac25904680655c76e65b03b9fb9f05c7bad4a07238e422888d8c4",
+      "target_sha256": "3fd940cf273a5262172c2e0d77e4392158eca5cd7ca4af3986c05d1f5205b8cc",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "template-plan",
+      "source": ".claude/skills/plan/template.md",
+      "target": ".agents/skills/plan/template.md",
+      "source_sha256": "02b654f2a5a7c13f71024636c29cb18ef772a8a71109dd9bcd64ab742b7877d8",
+      "target_sha256": "02b654f2a5a7c13f71024636c29cb18ef772a8a71109dd9bcd64ab742b7877d8",
+      "differences": "Byte-equivalent template apart from newline normalization; preserve headings, IDs and table format."
+    },
+    {
+      "id": "skill-report",
+      "source": ".claude/skills/report/SKILL.md",
+      "target": ".agents/skills/report/SKILL.md",
+      "source_sha256": "bda25c67a29e73e9539d9034dfc4607f4e770107a003c22c85900b4a8473b68c",
+      "target_sha256": "e3a96c41cc446c40456007e980f6a07503fcf0dd96a1a963be2d502533aa5a57",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "template-report",
+      "source": ".claude/skills/report/template.md",
+      "target": ".agents/skills/report/template.md",
+      "source_sha256": "a391092bf3d59945115faff6484e86950ed2c998bd6273f029f51852140e0387",
+      "target_sha256": "a391092bf3d59945115faff6484e86950ed2c998bd6273f029f51852140e0387",
+      "differences": "Byte-equivalent template apart from newline normalization; preserve headings, IDs and table format."
+    },
+    {
+      "id": "skill-session-log",
+      "source": ".claude/skills/session-log/SKILL.md",
+      "target": ".agents/skills/session-log/SKILL.md",
+      "source_sha256": "ed8d1d1481fea2f7dc979015e18954454693060626e0422c4d36623eebd36cbf",
+      "target_sha256": "59652028abcce3591454f17c8eb5913d1516311b8c9e1ecef2c00dab366c035a",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "template-session-log",
+      "source": ".claude/skills/session-log/template.md",
+      "target": ".agents/skills/session-log/template.md",
+      "source_sha256": "9e2b3527d1089079857e771cde05b421c52482c03692e3bceb27f79f3b007b42",
+      "target_sha256": "9e2b3527d1089079857e771cde05b421c52482c03692e3bceb27f79f3b007b42",
+      "differences": "Byte-equivalent template apart from newline normalization; preserve headings, IDs and table format."
+    },
+    {
+      "id": "skill-spec",
+      "source": ".claude/skills/spec/SKILL.md",
+      "target": ".agents/skills/spec/SKILL.md",
+      "source_sha256": "25678b8c8ff30f8ed3981ff4b700c2111ca016a4ce0a399c876158a7b9ff21dd",
+      "target_sha256": "a57a61411e9c71de19d0b2c5b6f9a001566543d635a62d79f51841e326781f1b",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "template-spec",
+      "source": ".claude/skills/spec/template.md",
+      "target": ".agents/skills/spec/template.md",
+      "source_sha256": "5da385edfe5a59e0259abb02ccd755b2bc0f639e57724b1eb37209a8b1c54bdb",
+      "target_sha256": "5da385edfe5a59e0259abb02ccd755b2bc0f639e57724b1eb37209a8b1c54bdb",
+      "differences": "Byte-equivalent template apart from newline normalization; preserve headings, IDs and table format."
+    },
+    {
+      "id": "skill-sync-reference",
+      "source": ".claude/skills/sync-reference/SKILL.md",
+      "target": ".agents/skills/sync-reference/SKILL.md",
+      "source_sha256": "42c4e47ea98be5c32f3072e1cf0b7e42a0c32c961f0168a75b6a3197d54578bd",
+      "target_sha256": "79326518b510b4f9974cfceb97c38e1c20fbd643194d277dc5d3f0d248b2ba0d",
+      "differences": "Independent Codex copy: no argument-hint, native Plan Mode read-only, references routed to Codex skills/rules, existing authorization honored. Runtime commands still read the shared table."
+    },
+    {
+      "id": "role-implementer",
+      "source": ".claude/agents/implementer.md",
+      "target": ".codex/agents/implementer.toml",
+      "source_sha256": "7254ce8adb6e01594e9a1eaac4920d528daf1b65ab503c39052a62f9e2ce2861",
+      "target_sha256": "9f23c7e8b2d4a16b3fc5faffdf83947ebf823b4dbddb3001399a9754506f0f75",
+      "differences": "Native TOML profile; inherit model. Coordinator alone ticks checklist. Reviewer read-only default and explicit no-write instructions. Runtime permissions take precedence."
+    },
+    {
+      "id": "role-reviewer",
+      "source": ".claude/agents/reviewer.md",
+      "target": ".codex/agents/reviewer.toml",
+      "source_sha256": "03506f28f3f132d5c1c5d32be2d535d4232c42e3c04650d8059bf92152eeb953",
+      "target_sha256": "06643eec32760d8912de08af44440d8b926bdd6bc1071547633e8db91adbaa1b",
+      "differences": "Native TOML profile; inherit model. Coordinator alone ticks checklist. Reviewer read-only default and explicit no-write instructions. Runtime permissions take precedence."
+    },
+    {
+      "id": "role-spec-writer",
+      "source": ".claude/agents/spec-writer.md",
+      "target": ".codex/agents/spec-writer.toml",
+      "source_sha256": "d68b3026ef7f88e8d8163fbaf4ca03e9d4c4d69482412b5ecf6ad9c1338f96ea",
+      "target_sha256": "b3ee0973ebf789c0af6bb888fc207ec0dcb9e61448a4ed6f878f0bd6175610bb",
+      "differences": "Native TOML profile; inherit model. Coordinator alone ticks checklist. Reviewer read-only default and explicit no-write instructions. Runtime permissions take precedence."
+    },
+    {
+      "id": "role-verification-writer",
+      "source": ".claude/agents/verification-writer.md",
+      "target": ".codex/agents/verification-writer.toml",
+      "source_sha256": "9aa544028033bee88ff293219ce0f6aa6cbaadb5dde2d84669ab18843cfef1d7",
+      "target_sha256": "1e6db2b8c45bb291aaaeef748a72ba638e4af1c50575c10e5f2b7512b4af1564",
+      "differences": "Native TOML profile; inherit model. Coordinator alone ticks checklist. Reviewer read-only default and explicit no-write instructions. Runtime permissions take precedence."
+    },
+    {
+      "id": "hook-bootstrap_local",
+      "source": ".claude/hooks/bootstrap_local.py",
+      "target": ".codex/hooks/dispatch.py",
+      "source_sha256": "91c25373a679af56ac7f115c2643cf1b3f7b4ceb6adafff90b93802bbdd3e342",
+      "target_sha256": "62f9d5056ce9c4ec5048f53e7edef1e67c31c78d056dcb4621860067e9b212e2",
+      "differences": "Independent native adapter, not direct import. No ask output; approval cases advisory. Git-root paths, multi-file patch inspection, Plan Mode and visible fail-open diagnostics. Shell and log checks remain heuristic."
+    },
+    {
+      "id": "hook-guard_local",
+      "source": ".claude/hooks/guard_local.py",
+      "target": ".codex/hooks/dispatch.py",
+      "source_sha256": "fbe82bf0fa656d2914c64027a233b7d271003bbad7679ae8a20b65e1dd339dcc",
+      "target_sha256": "62f9d5056ce9c4ec5048f53e7edef1e67c31c78d056dcb4621860067e9b212e2",
+      "differences": "Independent native adapter, not direct import. No ask output; approval cases advisory. Git-root paths, multi-file patch inspection, Plan Mode and visible fail-open diagnostics. Shell and log checks remain heuristic."
+    },
+    {
+      "id": "hook-guard_shell",
+      "source": ".claude/hooks/guard_shell.py",
+      "target": ".codex/hooks/dispatch.py",
+      "source_sha256": "228b70ddc1720a41759c3311c55e54edf2c6dc24cb5e5fae1c3265c44b700a47",
+      "target_sha256": "62f9d5056ce9c4ec5048f53e7edef1e67c31c78d056dcb4621860067e9b212e2",
+      "differences": "Independent native adapter, not direct import. No ask output; approval cases advisory. Git-root paths, multi-file patch inspection, Plan Mode and visible fail-open diagnostics. Shell and log checks remain heuristic."
+    },
+    {
+      "id": "hook-session_log_check",
+      "source": ".claude/hooks/session_log_check.py",
+      "target": ".codex/hooks/dispatch.py",
+      "source_sha256": "1a37bbf9bf6ddff301931aa7ea56403e54cd5e5ca2035d29611678bbfafa6d91",
+      "target_sha256": "62f9d5056ce9c4ec5048f53e7edef1e67c31c78d056dcb4621860067e9b212e2",
+      "differences": "Independent native adapter, not direct import. No ask output; approval cases advisory. Git-root paths, multi-file patch inspection, Plan Mode and visible fail-open diagnostics. Shell and log checks remain heuristic."
+    },
+    {
+      "id": "hook-_common",
+      "source": ".claude/hooks/_common.py",
+      "target": ".codex/hooks/dispatch.py",
+      "source_sha256": "1a57d3465de6c297c123d15ea788f573555615b49fd3c6377019cbd4b15a5c84",
+      "target_sha256": "62f9d5056ce9c4ec5048f53e7edef1e67c31c78d056dcb4621860067e9b212e2",
+      "differences": "Independent native adapter, not direct import. No ask output; approval cases advisory. Git-root paths, multi-file patch inspection, Plan Mode and visible fail-open diagnostics. Shell and log checks remain heuristic."
+    },
+    {
+      "id": "hook-registration",
+      "source": ".claude/settings.json",
+      "target": ".codex/hooks.json",
+      "source_sha256": "a13bfcb908fc1258234b6543260babda227c60c7ab078364ebc40225eb259ad4",
+      "target_sha256": "ac9929a2692c0273d057119a0fb2e24f08e3ce606f1fdc4f16cf08ccb6b4dfa2",
+      "differences": "Windows Git-root launcher, native event matchers and commandWindows. No copied Claude permission rules, global settings or automatic trust. Windows CMD launcher avoids requiring PowerShell script execution; no execution-policy changes. Omit optional top-level description unsupported by installed 0.142.5 parser."
+    }
+  ]
+}

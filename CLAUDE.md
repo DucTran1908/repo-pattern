@@ -78,7 +78,7 @@ Fill these in when the stack is chosen. Agents must use them instead of guessing
 
 **Index rule.** Every subfolder has a `README.md` that contains only a heading and a mapping table `| Path | Description |` (short, precise description per file). Update it whenever a file is added, renamed or removed — this includes `project-requirements/` and `test/`, whose index is the only file an agent may edit there. Nothing else goes in the index.
 
-**No leakage rule.** Tracked files (code, comments, specs, tests, commit messages, PR descriptions) must never reference specific content of `.local/` — no file names, numbers, quotes or paths into it. Only the framework files (`CLAUDE.md`, root `README.md`, `.gitignore`, `docs/workflow.md`, `.claude/**`) may describe the workspace *conventions*. If a spec needs information from `.local/`, restate the requirement in the spec itself.
+**No leakage rule.** Tracked files (code, comments, specs, tests, commit messages, PR descriptions) must never reference specific content of `.local/` — no file names, numbers, quotes or paths into it. Only the framework files (`CLAUDE.md`, `AGENTS.md`, root `README.md`, `.gitignore`, `docs/workflow.md`, `.claude/**`, `.agents/skills/**`, `.codex/**`) may describe the workspace *conventions*. If a spec needs information from `.local/`, restate the requirement in the spec itself.
 
 ## Implement plans
 

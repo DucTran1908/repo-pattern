@@ -15,8 +15,8 @@ import re
 
 from _common import INDEX_FILE, local_location, rel_to_root, run_pre_tool
 
-FRAMEWORK_FILES = ("CLAUDE.md", "README.md", ".gitignore", "docs/workflow.md")
-FRAMEWORK_PREFIXES = (".claude/",)
+FRAMEWORK_FILES = ("CLAUDE.md", "AGENTS.md", "README.md", ".gitignore", "docs/workflow.md")
+FRAMEWORK_PREFIXES = (".claude/", ".agents/skills/", ".codex/")
 
 LOCAL_REF = re.compile(r"(?<![\w.-])\.local[/\\]")
 CHECKBOX = re.compile(r"^(\s*(?:[-*+]|\d+\.)\s+)\[( |x|X|~)\](.*)$")

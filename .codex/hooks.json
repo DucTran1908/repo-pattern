@@ -1,0 +1,47 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "timeout": 15,
+            "statusMessage": "Checking project workflow",
+            "additionalContextLimit": 3000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|exec_command|apply_patch|Edit|Write)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "timeout": 15,
+            "statusMessage": "Checking project workflow",
+            "additionalContextLimit": 3000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -Command \"& (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/run-hook.cmd')\"",
+            "timeout": 15,
+            "statusMessage": "Checking project workflow",
+            "additionalContextLimit": 3000
+          }
+        ]
+      }
+    ]
+  }
+}

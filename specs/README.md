@@ -15,3 +15,4 @@ Spec-Driven Development: every feature or behaviour change starts here, before a
 
 | Id | Title | Status |
 |---|---|---|
+| SPEC-001 | Codex desktop support | approved |

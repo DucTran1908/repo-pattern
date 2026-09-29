@@ -108,6 +108,12 @@ class GuardLocalTest(TempRepoCase):
         for rel in ("CLAUDE.md", "README.md", ".gitignore", "docs/workflow.md", ".claude/skills/plan/SKILL.md"):
             self.assertIsNone(self.decide("Write", file_path=self.path(*rel.split("/")), content="Plans live in .local/plan/\n"), rel)
 
+    def test_codex_framework_conventions_are_exempt(self):
+        # SPEC-001/AC-7: only the new framework locations are exempt.
+        for rel in ("AGENTS.md", ".codex/README.md", ".agents/skills/plan/SKILL.md"):
+            self.assertIsNone(self.decide("Write", file_path=self.path(*rel.split("/")), content="Plans live in .local/plan/"), rel)
+        self.assertEqual(self.decide("Write", file_path=self.path(".agents", "unrelated.md"), content="see .local/test/private"), "ask")
+
     def test_nested_readme_is_not_framework(self):
         self.assertEqual(self.decide("Write", file_path=self.path("src", "README.md"), content="see .local/test/x\n"), "ask")
 
